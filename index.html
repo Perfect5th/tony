@@ -138,8 +138,9 @@
                 resultDiv.removeChild(resultDiv.firstChild);
             }
 
+            let response;
             try {
-                const response = await fetch(submitField.value);
+                response = await fetch(submitField.value);
             } catch (error) {
                 alert('Something went wrong - ask Mitch to check on it');
                 return;
@@ -152,8 +153,10 @@
 
             const html = await response.text();
             const template = document.createElement('template');
+
             template.innerHTML = html;
-            resultDiv.append(template);
+            resultDiv.append(...template.content.children);
+            window.scroll(0, 10000);
         });
     });
   </script>
