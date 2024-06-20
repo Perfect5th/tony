@@ -133,7 +133,10 @@
 
         submitForm.addEventListener('submit', async (event) => {
             event.preventDefault();
-            resultDiv.removeChild();
+
+            while (resultDiv.firstChild) {
+                resultDiv.removeChild(resultDiv.firstChild);
+            }
 
             try {
                 const response = await fetch(submitField.value);
