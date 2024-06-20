@@ -1,0 +1,143 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+  </head>
+  <body>
+    <h1>Gather the Letters</h1>
+    <h1>Decipher Them</h1>
+    <h1>Claim Your Reward</h1>
+    <hr />
+    <blockquote>
+      <p>
+        Riddles were all he could think of. Asking them, and sometimes guessing them, had been the
+        only game he had ever played with other funny creatures sitting in their holes in the long,
+        long ago, before the goblins came, and he was cut off from his friends far under under the
+        mountains. <strong>+1</strong>
+      </p>
+    </blockquote>
+
+    <blockquote>
+      <p>
+        &ldquo;I must not fear. Fear is the mind-killer. Fear is the little-death that brings total
+        obliteration. I will face my fear. I will permit it to pass over me and through me. And when
+        it has gone past I will turn the inner eye to see its path. Where the fear has gone there
+        will be nothing. Only I will remain.&rdquo; <strong>-21</strong>
+      </p>
+    </blockquote>
+
+    <blockquote>
+      <p>
+        &lsquo;Anyway – Harry,&rsquo; said the giant, turning his back on the Dursleys, &lsquo;a
+        very happy birthday to yeh. Got summat fer yeh here – I mighta sat on it at some point, but
+        it'll taste all right.&rsquo;<br />
+        From an inside pocket of his black overcoat he pulled a slightly squashed box. Harry opened
+        it with trembling fingers. Inside was a large, sticky chocolate cake with <em>Happy Birthday
+        Harry</em> written on it in green icing. <strong>+11</strong>
+      </p>
+    </blockquote>
+
+    <blockquote>
+      <p>
+        But in the meantime, the general opinion in the neighbourhood was that Bilbo, who had always
+        been rather cracked, had at last gone quite mad, and had run off in the Blue. There he had
+        undoubtedly fallen into a pool or a river and come to a tragic, but hardly an untimely, end.
+        The blame was mostly laid on Gandalf. <strong>+11</strong>
+      </p>
+    </blockquote>
+
+    <blockquote>
+      <p>
+        Harry turned to Ron and Hermione; beyond them, he saw the long Gryffindor table all watching
+        him, open-mouthed.<br />
+        &lsquo;I didn't put my name in,&rsquo; Harry said blankly. &lsquo;You know I didn't.&rsquo;
+        <strong>+10</strong>
+      </p>
+    </blockquote>
+
+    <blockquote>
+      <p>
+        Harry stared at him. Tom Riddle had been at Hogwarts fifty years ago, yet here he stood, a
+        weird, misty light shining about him, not a day older than seventeen.<br />
+        &lsquo;Are you a ghost?&rsquo; Harry said uncertainly.<br />
+        &lsquo;A memory.&rsquo; said Riddle quietly. &lsquo;Preserved in a diary for fifty
+        years.&rsquo; <strong>+3</strong>
+      </p>
+    </blockquote>
+
+    <blockquote>
+      <p>
+        The sun was already sinking into the deep green of the hills to the west of the valley, the
+        red and gray-pink of its shadows touching the corners of the land, when Flick Ohmsford began
+        his descent. <strong>+31</strong>
+      </p>
+    </blockquote>
+
+    <blockquote>
+      <p>
+        The dwarves ate and ate, and talked and talked, and time got on. At last they pushed their
+        chairs back.<br />
+        &ldquo;I suppose you will all stay to supper?&rdquo; he said in his politest unpressing
+        tones. <strong>-41</strong>
+      </p>
+    </blockquote>
+
+    <blockquote>
+      <p>
+        &lsquo;Denethor has gone to the tombs,&rsquo; said Pippin, &lsquo;and he has taken Faramir,
+        and he says we are all to burn, and he will not wait, and they are to make a pyre and burn
+        him on it, and Faramir as well.&rsquo; <strong>+47</strong>
+      </p>
+    </blockquote>
+
+    <blockquote>
+      <p>
+        &lsquo;What was that thing?&rsquo; he asked Lupin.<br />
+        &lsquo;A Dementor,&rsquo; said Lupin, who was now giving chocolate to everyone else.
+        &lsquo;One of the Dementors of Azkaban.&rsquo;<br />
+        Everyone stared at him. Professor Lupin crumpled up the empty chocolate wrapper and put it
+        in his pocket. <strong>+6</strong>
+      </p>
+    </blockquote>
+
+    <blockquote>
+      <p>
+        The night sky brightened faintly in the east with the approach of dawn as the Chosen entered
+        the Gardens of Life. Without, the Elven city of Arborlon lay sleeping, its people still
+        wrapped in the warmth and solitude of their beds. But for the Chosen, the day had already
+        begun. <strong>+20</strong>
+      </p>
+    </blockquote>
+
+    <blockquote>
+      <p>
+        Aragorn knelt beside him. Boromir opened his eyes and strove to speak. At last slow words
+        came. &lsquo;I tried to take the Ring from Frodo,&rsquo; he said. &lsquo;I am sorry. I have
+        paid.&rsquo; His glance strayed to his fallen enemies; twenty at least lay there.
+        <strong>+10</strong>
+      </p>
+    </blockquote>
+    <hr />
+
+    <form method="GET" id="submit-form" action="">
+      <input id="submit-field" />
+      <input type="submit" name="" value="Submit" />
+    </form>
+  </body>
+  <script type="text/javascript">
+    document.addEventListener('DOMContentLoaded', () => {
+        const submitForm = document.querySelector('#submit-form');
+        const submitField = document.querySelector('#submit-field');
+
+        submitForm.addEventListener('submit', async (event) => {
+            event.preventDefault();
+
+            try {
+                const response = await fetch(submitField.value);
+            } catch (error) {
+                console.error(error.message);
+            }
+        });
+    });
+  </script>
+</html>
