@@ -123,20 +123,34 @@
       <input id="submit-field" />
       <input type="submit" name="" value="Submit" />
     </form>
+    <div id="result-div"></div>
   </body>
   <script type="text/javascript">
     document.addEventListener('DOMContentLoaded', () => {
         const submitForm = document.querySelector('#submit-form');
         const submitField = document.querySelector('#submit-field');
+        const resultDiv = document.querySelector('#result-div');
 
         submitForm.addEventListener('submit', async (event) => {
             event.preventDefault();
+            resultDiv.removeChild();
 
             try {
                 const response = await fetch(submitField.value);
             } catch (error) {
-                console.error(error.message);
+                alert('Something went wrong - ask Mitch to check on it');
+                return;
             }
+
+            if (!response.ok) {
+                alert('Nice try, but that is incorrect!');
+                return;
+            }
+
+            const html = await response.text();
+            const template = document.createElement('template');
+            template.innerHTML = html;
+            resultDiv.append(template);
         });
     });
   </script>
